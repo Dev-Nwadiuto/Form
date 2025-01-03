@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Students Details</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" type="image/jpg" href="/image/favicon/icon-white.jpg">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+	  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	
+    <link rel="stylesheet" href="/styles/index.css"/>
+  <link rel="apcdn" href="https://restcountries.com/v3.1/all">
+  <datalist name="State of Origin" id="States">
+    <option value="Abia">Abia</option>
+    <option value="Adamawa">Adamawa</option>
+    <option value="Akwa Ibom">Akwa Ibom</option>
+    <option value="Anambra">Anambra</option>
+    <option value="Bauchi">Bauchi</option>
+    <option value="Bayelsa">Bayelsa</option>
+    <option value="Benue">Benue</option>
+    <option value="Borno">Borno</option>
+    <option value="Cross River">Cross River</option>
+    <option value="Delta">Delta</option>
+    <option value="Ebonyi">Ebonyi</option>
+    <option value="Edo">Edo</option>
+    <option value="Ekiti">Ekiti</option>
+    <option value="Enugu">Enugu</option>
+    <option value="Gombe">Gombe</option>
+    <option value="Imo">Imo</option>
+    <option value="Jigawa">Jigawa</option>
+    <option value="Kaduna">Kaduna</option>
+    <option value="Kano">Kano</option>
+    <option value="Katsina">Katsina</option>
+    <option value="Kebbi">Kebbi</option>
+    <option value="Kogi">Kogi</option>
+    <option value="Kwara">Kwara</option>
+    <option value="Lagos">Lagos</option>
+    <option value="Nasarawa">Nasarawa</option>
+    <option value="Niger">Niger</option>
+    <option value="Ogun">Ogun</option>
+    <option value="Ondo">Ondo</option>
+    <option value="Osun">Osun</option>
+    <option value="Oyo">Oyo</option>
+    <option value="Plateau">Plateau</option>
+    <option value="Rivers">Rivers</option>
+    <option value="Sokoto">Sokoto</option>
+    <option value="Taraba">Taraba</option>
+    <option value="Yobe">Yobe</option>
+    <option value="Zamfara">Zamfara</option>
+  </datalist>
+  
+  <!--<select onchange="toggleLGA(this);" name="state" id="state" class="form-control">
+	  <option value="" selected="selected">- Select -</option>
+	  <option value="Abia">Abia</option>
+	  <option value="Adamawa">Adamawa</option>
+	  <option value="AkwaIbom">AkwaIbom</option>
+	  <option value="Anambra">Anambra</option>
+	  <option value="Bauchi">Bauchi</option>
+	  <option value="Bayelsa">Bayelsa</option>
+	  <option value="Benue">Benue</option>
+	  <option value="Borno">Borno</option>
+	  <option value="Cross River">Cross River</option>
+	  <option value="Delta">Delta</option>
+	  <option value="Ebonyi">Ebonyi</option>
+	  <option value="Edo">Edo</option>
+	  <option value="Ekiti">Ekiti</option>
+	  <option value="Enugu">Enugu</option>
+	  <option value="FCT">FCT</option>
+	  <option value="Gombe">Gombe</option>
+	  <option value="Imo">Imo</option>
+	  <option value="Jigawa">Jigawa</option>
+	  <option value="Kaduna">Kaduna</option>
+	  <option value="Kano">Kano</option>
+	  <option value="Katsina">Katsina</option>
+	  <option value="Kebbi">Kebbi</option>
+	  <option value="Kogi">Kogi</option>
+	  <option value="Kwara">Kwara</option>
+	  <option value="Lagos">Lagos</option>
+	  <option value="Nasarawa">Nasarawa</option>
+	  <option value="Niger">Niger</option>
+	  <option value="Ogun">Ogun</option>
+	  <option value="Ondo">Ondo</option>
+	  <option value="Osun">Osun</option>
+	  <option value="Oyo">Oyo</option>
+	  <option value="Plateau">Plateau</option>
+	  <option value="Rivers">Rivers</option>
+	  <option value="Sokoto">Sokoto</option>
+	  <option value="Taraba">Taraba</option>
+	  <option value="Yobe">Yobe</option>
+	  <option value="Zamfara">Zamafara</option>
+	</select>-->
+
+  <style>
+    /*body{
+      background-color: black;
+    }*/
+  </style>
+</head>
+
+<body>
+ <main>
+  <header>
+    Student Details
+  </header>
+  <section class="info-section">
+    <div class="info-div">
+      <div class="info-icon-section">
+        <button class="button-active">
+          <i class="fa-solid fa-city"></i>
+        </button>
+        <hr class="hr-active">
+      </div>
+      <span class="span-left">Personal Info</span>
+    </div>
+    
+    <div class="info-div">
+      <div class="info-icon-section">
+        <hr>
+        <button class="button-inactive">
+          <i class="fa-solid fa-user user"></i>
+        </button>
+      </div>
+      <span class="span-right">Other Info</span>
+    </div>
+  </section>
+  
+  <form id="student-details">
+    <div class="name-div">
+      
+      <i class="fa-solid fa-user form-icons"></i>
+      <input type="text" placeholder="Surname">
+      
+      <i class="fa-solid fa-user form-icons"></i>
+      <input type="text" placeholder="Middle Name">
+      
+      <i class="fa-solid fa-user form-icons"></i>
+      <input type="text" placeholder="First Name">
+      
+      <i class="fa fa-phone form-icons" aria-hidden="true"></i>
+      <input type="text" placeholder="Phone Number">      
+    </div>
+    
+    <div class="gender-div">
+      <i class="fa-solid fa-person-half-dress form-icons"></i>
+      
+      <div class="gender-input-div">
+        <span>Gender</span>
+        <div class="select-gender">
+          <div>
+            <input type="checkbox" title="Male" checked>
+            <span>Female</span>
+          </div>
+          <div>
+            <input type="checkbox" title="Male" unchecked>
+            <span>Male</span>
+          </div>
+       </div>
+      </div>
+    </div>
+    
+    <div class="other-info-div">
+      <i class="fa fa-map-marker form-icons"></i>
+      <input type="text" placeholder="Address">
+      
+      <i class="fa-solid fa-calendar-day form-icons"></i>
+      <input type="text" placeholder="Date of birth">
+      
+      <i class="fa-solid fa-city form-icons"></i>
+      <input type="text" placeholder="Place of birth">
+      
+      <i class="fa fa-city form-icons" aria-hidden="true"></i>
+      <div>
+        
+        <span>
+          State
+        </span>
+        <select onchange="toggleLGA(this);" name="state" id="state" class="form-control">
+      	  <option value="" selected="selected">- Select State -</option>
+      	  <option value="Abia">Abia</option>
+      	  <option value="Adamawa">Adamawa</option>
+      	  <option value="AkwaIbom">AkwaIbom</option>
+      	  <option value="Anambra">Anambra</option>
+      	  <option value="Bauchi">Bauchi</option>
+      	  <option value="Bayelsa">Bayelsa</option>
+      	  <option value="Benue">Benue</option>
+      	  <option value="Borno">Borno</option>
+      	  <option value="Cross River">Cross River</option>
+      	  <option value="Delta">Delta</option>
+      	  <option value="Ebonyi">Ebonyi</option>
+      	  <option value="Edo">Edo</option>
+      	  <option value="Ekiti">Ekiti</option>
+      	  <option value="Enugu">Enugu</option>
+      	  <option value="FCT">FCT</option>
+      	  <option value="Gombe">Gombe</option>
+      	  <option value="Imo">Imo</option>
+      	  <option value="Jigawa">Jigawa</option>
+      	  <option value="Kaduna">Kaduna</option>
+      	  <option value="Kano">Kano</option>
+      	  <option value="Katsina">Katsina</option>
+      	  <option value="Kebbi">Kebbi</option>
+      	  <option value="Kogi">Kogi</option>
+      	  <option value="Kwara">Kwara</option>
+      	  <option value="Lagos">Lagos</option>
+      	  <option value="Nasarawa">Nasarawa</option>
+      	  <option value="Niger">Niger</option>
+      	  <option value="Ogun">Ogun</option>
+      	  <option value="Ondo">Ondo</option>
+      	  <option value="Osun">Osun</option>
+      	  <option value="Oyo">Oyo</option>
+      	  <option value="Plateau">Plateau</option>
+      	  <option value="Rivers">Rivers</option>
+      	  <option value="Sokoto">Sokoto</option>
+      	  <option value="Taraba">Taraba</option>
+      	  <option value="Yobe">Yobe</option>
+      	  <option value="Zamfara">Zamafara</option>
+      	</select>
+      	
+      	
+      </div>
+      
+      <i class="fa-solid fa-building form-icons"></i>
+      <div>
+        <span>
+          Local government
+        </span>
+        
+        <select name="lga" id="lga" class="form-control select-lga" required>
+          <option value="" selected> - Select LGA -</option>
+        </select>
+      </div>
+      
+      <i class="fa fa-flag form-icons"></i>
+      <div>
+        <span>
+          Nationality
+        </span>
+
+       <select name="country" id="country" class="form-control select-lga" required>
+        <option value="Nigerian" selected> Nigerian</option>
+       </select>
+      </div>
+      
+      <i class="fa-solid fa-s form-icons"></i>
+       <div>
+        <span>
+          Current Class
+        </span>
+
+        <select name="currentclass" id="currentclass" class="form-control select-lga" required>
+          <option value="Pre Nursery" selected>Pre Nursery</option>
+          <option value="Nursery">Nursery</option>
+          <option value="Primary">Primary</option>
+          <option value="Secondary">Secondary</option>
+          <option value="Tertiary">Tertiary</option>
+        </select>
+      </div>
+      
+      <i class="fa fa-house form-icons" aria-hidden="true"></i>
+      <input type="text" placeholder="School Last Attended">
+      
+      <i class="fa fa-calendar-day form-icons"></i>
+      <input type="text" placeholder="Year of Admission">
+      
+      <i class="fa-solid fa-pen form-icons"></i>
+      <input type="text" placeholder="ABSSIN Number">
+    </div>
+    
+    <div class="upload-img-div">
+      <span class="upload-img-div-span">
+        Profile Picture
+      </span>
+      <div class="upload-image">
+        <img class="student-image" src="/image/images.jpeg">
+        <button class="Remove-image-button">
+          REMOVE
+        </button>
+        <span class="file-name">
+          User.png
+          <span class="instruction">
+            drag and drop or click to replace
+          </span>
+        </span>
+      </div>
+      <div class="gallery-access">
+        <button class="browse-button ">
+          <i class="fa fa-image"></i>
+          <span>Browse...</span>
+        </button>
+        <button class="capture-button ">
+          <i class="fa fa-camera"></i>
+          <span>Capture</span>
+        </button>
+      </div>
+    </div>
+  </form>
+ </main>
+ 
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous">
+ </script>	
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous">
+   
+ </script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+		crossorigin="anonymous">
+  
+</script>
+	<script src="/scripts/lga.min.js"></script>
+	<script src="/scripts/countries.js"></script>
+</body>
+
+</html>

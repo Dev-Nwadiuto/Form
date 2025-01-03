@@ -1,0 +1,209 @@
+body{
+  background-color: #eeeeee;
+  font-size: 8px;
+}
+main{
+  margin: 20px 5px;
+  background-color: white;
+  padding: 30px 15px;
+  border-radius: 4px;
+}
+
+header{
+  font-weight: 500;
+  margin-bottom: 25px;
+  font-size: 10px;
+}
+
+.info-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3px;
+}
+
+.info-div{
+  display: grid;
+  row-gap: 5px;
+  position: relative;
+}
+
+.info-icon-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user {
+  color: white;
+}
+
+.fa-city {
+  color: purple;
+}
+
+.button-active, .button-inactive{
+  border: none;
+  border-radius: 100%;
+  padding: 15px;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.button-active{
+  border: 2px solid purple;
+}
+
+hr{
+  width: 70px;
+  height: 1px;
+  background-color: lightgrey;
+  border: .1px solid lightgrey;
+}
+
+.span-right{
+  text-align: right;
+  position: absolute;
+  bottom: -15px;
+  right: -3.5px;
+}
+
+.span-left{
+  text-align: left;
+  position: absolute;
+  bottom: -15px;
+  left: -3.5px;
+}
+
+.hr-active{
+  border: 1px solid purple;
+  background-color: purple;
+}
+
+.name-div, .gender-div, .other-info-div, .Place-of-origin{
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  align-items: center;
+  justify-content: center;
+  row-gap: 12px;
+  margin-top: 60px;
+}
+
+.name-div input, .other-info-div input, .other-info-div select{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid lightgrey;
+}
+
+.name-div input::placeholder, .other-info-div input::placeholder, .other-info-div select {
+  color: grey;
+  font-size: 8px;
+}
+
+.form-icons{
+  color: grey;
+  font-size: 8px;
+}
+
+.gender-div, .other-info-div{
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.select-gender{
+  display: flex;
+  justify-content: start;
+  font-weight: 300;
+  align-items: center;
+}
+
+.select-gender div{
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  gap: 2px;
+}
+
+.select-gender input{
+  margin-left: 0px;
+}
+
+.form-control{
+  border-radius: 0px;
+  padding: 5px;
+  -webkit-appearance: square-button;
+}
+
+.upload-img-div{
+  display: grid;
+  grid-template-rows: 1fr 90px 1fr;
+  margin-top: 20px;
+}
+
+.upload-img-div-span{
+  text-align: center;
+}
+
+.upload-image{
+  width: 100%;
+  position: relative;
+  display: block;
+  border: 1px solid lightgray;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  padding: 8px 0px 20px 0px;
+  
+}
+
+.student-image{
+  border-radius: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.Remove-image-button, .file-name{
+  position: absolute;
+  bottom: 8px;
+}
+
+.Remove-image-button{
+  right: 8px;
+  border: 1px solid gray;
+  border-radius: 1px;
+  padding: 2px 8px;
+}
+
+.file-name{
+  font-weight: 500;
+  left: 8px;
+}
+
+.file-name span{
+  display: block;
+}
+
+.gallery-access{
+  display: flex;
+  justify-content: center; 
+  padding: 4px;
+  column-gap: 4px;
+}
+
+.capture-button, .browse-button{
+  border: none;
+  padding: 5px 8px;
+  font-weight: 250;
+  border-radius: 2.5px;
+}
+
+.browse-button{
+  background-color: purple;
+  color: white;
+}
+
